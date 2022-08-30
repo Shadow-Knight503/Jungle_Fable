@@ -64,8 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AIPlayer.cs" />
     <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Player2.cs" />
+    <Compile Include="Assets\Player3.cs" />
+    <Compile Include="Assets\Player4.cs" />
+    <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\Route.cs" />
+    <None Include="Assets\craftpix-net-636502-free-wild-animal-3d-low-poly-models\readme.txt" />
+    <None Include="Assets\craftpix-net-636502-free-wild-animal-3d-low-poly-models\License.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

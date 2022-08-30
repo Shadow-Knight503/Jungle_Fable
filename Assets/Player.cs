@@ -5,9 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Route currentRoute;
-    int routePosition;
+    public int routePosition;
     public int steps;
     bool isMoving;
+    public int PS;
 
 
     // Start is called before the first frame update
@@ -19,11 +20,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && !isMoving)
+        if(Input.GetKeyDown(KeyCode.Space) && !isMoving && PS==0)
         {
             steps = Random.Range(1, 7);
             Debug.Log("Dice Rolled" + steps);
-
+            
             if(routePosition + steps < currentRoute.childNodeList.Count)
             {
                 StartCoroutine(Move());
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
             routePosition++;
         }
         isMoving = false;
+        PS = 1;
     }
 
     bool MoveToNextNode(Vector3 goal)
